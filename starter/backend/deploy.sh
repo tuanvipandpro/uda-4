@@ -19,10 +19,10 @@ npm audit fix
 serverless
 
 # Next time, deploy the app and note the endpoint url in the end
-serverless deploy --verbose
+# serverless deploy --verbose
 
 # If you face a permissions error, you may need to specify the user profile
-sls deploy -v --aws-profile serverless
+# sls deploy -v --aws-profile serverless
 
 
 # Print end message
