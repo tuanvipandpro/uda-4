@@ -15,7 +15,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { useNavigate } from 'react-router-dom'
 import { deleteTodo, getTodos, patchTodo } from '../api/todos-api'
 import { NewTodoInput } from './NewTodoInput'
-import {AUTH0_AUDIENCE, AUTH0_DOMAIN_NAME} from "../config";
+import {AUTH0_AUDIENCE} from "../config";
 
 const reactAppAudience = AUTH0_AUDIENCE
 

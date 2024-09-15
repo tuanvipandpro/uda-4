@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Button, Form } from 'semantic-ui-react'
 import { getUploadUrl, uploadFile } from '../api/todos-api'
-import {AUTH0_AUDIENCE, AUTH0_DOMAIN_NAME} from "../config";
+import {AUTH0_AUDIENCE, AUTH0_DOMAIN} from "../config";
 
 const reactAppAudience = AUTH0_AUDIENCE
 
@@ -62,7 +62,7 @@ export function EditTodo() {
     }
   }
 
-  const [file, setFile] = useState(AUTH0_DOMAIN_NAME)
+  const [file, setFile] = useState(AUTH0_DOMAIN)
   const [uploadState, setUploadState] = useState(UploadState.NoUpload)
   const { getAccessTokenSilently } = useAuth0()
   const { todoId } = useParams()

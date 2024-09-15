@@ -5,7 +5,7 @@ import { createTodo } from '../../businessLogic/todos.mjs'
 const httpEventLogger = createLogger('http')
 
 export async function handler(event) {
-  httpEventLogger.info(`Now processing createTodo event: ${JSON.stringify(event, null, 2)}`)
+  httpEventLogger.info(`Now processing createTodo event: ${event}`)
 
   const newTodo = JSON.parse(event.body)
 
@@ -13,7 +13,7 @@ export async function handler(event) {
 
   const item = await createTodo(newTodo, userId)
 
-  httpEventLogger.info(`Finished processing createTodo event. Todo created: ${JSON.stringify(event, null, 2)}`)
+  httpEventLogger.info(`Finished processing createTodo event. Todo created: ${event}`)
 
   return {
     statusCode: 201,

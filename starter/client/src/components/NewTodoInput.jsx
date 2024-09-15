@@ -3,7 +3,7 @@ import dateFormat from 'dateformat'
 import React, { useState } from 'react'
 import { Divider, Grid, Input } from 'semantic-ui-react'
 import { createTodo } from '../api/todos-api'
-import {AUTH0_AUDIENCE, AUTH0_DOMAIN_NAME} from "../config";
+import {AUTH0_AUDIENCE} from "../config";
 
 const reactAppAudience = AUTH0_AUDIENCE
 
